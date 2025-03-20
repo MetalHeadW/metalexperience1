@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #atividade de imc feita por Mateus Dantas Wendhausen 
  #irei definir a variavel do imc para fazer os cálculos e gerar respostas variadas conforme\
 #o usuário digita no programa
@@ -87,4 +86,4 @@ c_imc = class_imc (sexo,peso,altura)
 
 print('O seu IMC é:',v_imc[0:5])
 print('A sua classificação é:',c_imc)
-=======
+
