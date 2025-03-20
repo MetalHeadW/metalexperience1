@@ -45,7 +45,7 @@ print('Calculadora de IMC')
 
 valid_sexo = False
 while valid_sexo == False:
-    sexo = input('Digite o seu sexo (M ou F): ').lower()
+    sexo = input('Digite o seu sexo (M ou F):').lower()
     if sexo != 'm' and sexo != 'f':
         print('Dados invalidos, digite M ou F.')
     else:
@@ -86,4 +86,3 @@ c_imc = class_imc (sexo,peso,altura)
 
 print('O seu IMC é:',v_imc[0:5])
 print('A sua classificação é:',c_imc)
-
