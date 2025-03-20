@@ -86,4 +86,3 @@ c_imc = class_imc (sexo,peso,altura)
 
 print('O seu IMC é:',v_imc[0:5])
 print('A sua classificação é:',c_imc)
-
