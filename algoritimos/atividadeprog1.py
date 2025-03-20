@@ -72,7 +72,7 @@ while valid_altura == False:
     try:
         altura = float(altura)
         if altura <=0 or altura > 3:
-            print('Dados inválidos, o numero não pode ser zetp nem inferior a 3 metros')
+            print('Dados inválidos, o numero não pode ser zero nem inferior a 3 metros')
         else:
             valid_altura = True
             print('\n')
