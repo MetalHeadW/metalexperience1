@@ -8,7 +8,7 @@ def imc(peso, altura):
 def class_imc(sexo, peso, altura):
     val_imc = imc(peso,altura)
 #aqui defino os valores do imc para o sexo masculino
-    if sexo == 'm':
+    if sexo == 'h':
         if val_imc < 20.7:
             return "Abaixo do peso"
         elif val_imc >= 20.7 and val_imc < 26.4:
@@ -45,9 +45,9 @@ print('Calculadora de IMC')
 
 valid_sexo = False
 while valid_sexo == False:
-    sexo = input('Digite o seu sexo (M ou F): ').lower()
-    if sexo != 'm' and sexo != 'f':
-        print('Dados invalidos, digite M ou F.')
+    sexo = input('Digite o seu sexo (H ou F): ').lower()
+    if sexo != 'h' and sexo != 'f':
+        print('Dados invalidos, digite H ou F.')
     else:
         valid_sexo = True
         print('\n')
