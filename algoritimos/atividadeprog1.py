@@ -37,7 +37,7 @@ def class_imc(sexo, peso, altura):
         else:
             return"Erro no programa"
         
-        #vou criar o sistema de imput do usuário
+        #vou criar o sistema de input do usuário
 
         
         
