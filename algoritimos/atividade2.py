@@ -10,3 +10,5 @@ c) Milhas
 '''
 
 pes = 12
+jarda = 3
+milha = 1760
