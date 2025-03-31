@@ -1,14 +1,8 @@
-'''Faça um programa que calcule e mostre a área de um triangulo. Sabe-se que: a
-Sabe-se que:
-1 pé = 12 polegadas
-1 jarda = 3 pés
-1 milha = 1760 jardas
-Faça um programa que receba uma medida em pés e mostre os resultados:
-a) Polegadas
-b) Jardas
-c) Milhas
-'''
 
-pes = 12
-jarda = 3
-milha = 1760
+#entrada de dados
+base = float(input('digite a base do triângulo'))
+altura =float(input('digite a altura do triângulo'))
+#processamento
+area = (base*altura)/2
+#saida
+print("a área do triângulo é de{:.2f}".format(area))
