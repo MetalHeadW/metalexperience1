@@ -8,3 +8,14 @@ a) Polegadas
 b) Jardas
 c) Milhas
 '''
+
+#entrada de dados
+pes=float(input("medida em pés"))
+#processamento
+polegadas=pes*12
+jardas=pes/3
+milhas=jardas/1760
+#saida
+print("pes em polegadas{}".format(polegadas))
+print("pes em jardas{}".format(jardas))
+print("pes em milhas{}".format(milhas))
