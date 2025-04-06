@@ -37,7 +37,7 @@ def class_imc(sexo, peso, altura):
         else:
             return"Erro no programa"
         
-        #vou criar o sistema de imput do usuário
+        #vou criar o sistema de input do usuário
 
         
         
@@ -72,7 +72,7 @@ while valid_altura == False:
     try:
         altura = float(altura)
         if altura <=0 or altura > 3:
-            print('Dados inválidos, o numero não pode ser zetp nem inferior a 3 metros')
+            print('Dados inválidos, o numero não pode ser zero nem inferior a 3 metros')
         else:
             valid_altura = True
             print('\n')
@@ -85,4 +85,4 @@ v_imc = str(imc(peso,altura))
 c_imc = class_imc (sexo,peso,altura)
 
 print('O seu IMC é:',v_imc[0:5])
-print('A sua classificação é:',c_imc)
+print('A sua classificação é:',c_imc)   
