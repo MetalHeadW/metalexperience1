@@ -8,7 +8,21 @@ dia2 = int(input("digite um dia do mês: "))
 mes2 = int(input("digite um mês do ano: "))
 ano2 = int(input("digite um ano: "))
 
-data1 = (dia1, mes1, ano1)
-data2 = (dia2, mes2, ano2)
-print (data1)
-print (data2)
+if ano1 < ano2:
+    print("a data 1 aconteceu primero")
+elif ano2 < ano1:
+    print("a data 2 ocorreu primeiro")
+else:
+   if mes1 < mes2:
+    print("a data 1 aconteceu primero")
+   elif mes2 < mes1:
+    print("a data 2 ocorreu primeiro")
+   else:
+       if dia1 < dia2:
+        print("a data 1 aconteceu primero")
+       elif dia2 < dia1:
+        print("a data 2 ocorreu primeiro")
+       else:
+           print("as datas são iguais")
+
+    
