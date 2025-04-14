@@ -1,14 +1,32 @@
-'''Cada produto no estoque contém as seguintes informações:
-Nome do produto
-Quantidade atual do produto em estoque.
-Quantidade mínima permitida.
-Quantidade máxima permitida.
-O usuário deve informar os dados do produto e qual operação que deseja fazer:
-1 - Adicionar no estoque
-2 - retirar do estoque
-Ao escolher a operação, deve perguntar quantos itens deseja adicionar ou retirar, conforme a operação
-escolhida.
-Verificar se a operação pode ser feita, considerando a quantidade mínima ou a quantidade máxima e
-tomar ações apropriadas (exibir mensagens de alerta no caso de operação não permitida e exibir o novo
-estoque no caso de a operação ser permitida)'''
 
+nomeprod = input("Informe o nome do produto: ")
+estoque = int(input("Estoque atual do produto: "))
+min = int(input("quantidade minima permitida: "))
+quantiMax = int(input("quantidade máxima permitida "))
+
+print("\nEscolha o que quer fazer:")
+print("1 - Adicionar no estoque")
+print("2 - Retirar do estoque")
+opcao = input("o que quer fazer hoje? ")
+
+
+if opcao == "1":
+    addQuanti = int(input("Quantos itens deseja adicionar ao estoque? "))
+    if estoque + addQuanti > quantiMax:
+        print("O estoque aceita apenas {} unidades.".format(quantiMax))
+    else:
+      estoque += quantiMax
+      print("Operação realizada com sucesso.")
+    print("Novo estoque de {} : {} unidades.".format(nomeprod,estoque))
+        
+elif opcao == "2":
+    quantiRemove = int(input("Quantos itens desejaria remover do nosso estoque? "))
+    if estoque - quantiRemove < min:
+        print("o estoque aceita remover até apenas {} unidades.".format(min))
+    else:
+        estoque -= quantiRemove
+        print("Operação realizada com sucesso.")
+        print("Novo estoque de '{}': {} unidades.".format(nomeprod,estoque))
+        
+else:
+    print("Escolha 1  2") 
