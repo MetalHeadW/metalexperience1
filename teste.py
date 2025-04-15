@@ -26,4 +26,3 @@ elif opcao == "2":
         quantidade_atual -= quantidade_retirar
         print(f"\n✅ Operação realizada com sucesso.")
         print(f"Novo estoque de '{nome_produto}': {quantidade_atual} unidades.")
-q
