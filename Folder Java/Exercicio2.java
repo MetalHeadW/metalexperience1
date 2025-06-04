@@ -10,7 +10,7 @@ public class Exercicio2 {
        String resultado = " ";
      for (int i=0; i<n; i++){
         String nome =JOptionPane.showInputDialog("Nome");
-        resultado += "\n" + nome + "-" + verificaCategoria(lerInt("Idade de"+nome));
+        resultado += "\n" + nome + "-" + verificaCategoria(lerInt("Idade de " + nome));
      }
      exibeMsg(resultado);
     }
