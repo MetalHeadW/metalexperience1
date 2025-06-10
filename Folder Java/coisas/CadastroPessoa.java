@@ -48,7 +48,10 @@ public class CadastroPessoa {
 	}
 
 	public static int menu() {
-		String m = "1 - Cadastrar\n" + "2 - Busca por opção\n" + "3 - Listar todos\n" + "4 - sair";
+		String m = "1 - Cadastrar\n" 
+		+ "2 - Busca por opção\n" 
+		+ "3 - Listar todos\n" 
+		+ "4 - sair";
 		return lerInt(m);
 	}
 
