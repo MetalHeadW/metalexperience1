@@ -6,7 +6,7 @@ public static void main(String[] args) {
 	int terr = 0;
 	int dra = 0;
 	
-	while (op != 'S') {
+
 		
 }
 }
