@@ -22,7 +22,7 @@ public class Testando {
 		if(indice == -1)
 			exibeMsg("Não Encontrado");
 		else
-			exibeMsg(nomes.get(indice)+ " - " + fones.get(indice));
+			exibeMsg(nomes.get(indice)+ " - " + fone.get(indice));
 		
 	}
 	
@@ -53,9 +53,7 @@ public class Testando {
 ///			exibeMsg("Não encontrado");
 ///		else 
 ///			exibeMsg(result);
-
-    
-		
+	
 	}
 	
 	static void cadastrar() {
