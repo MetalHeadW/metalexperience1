@@ -3,9 +3,9 @@ package arrayList;
 import javax.swing.JOptionPane;
 
 public class Refractor2 {
-	static String[] marcas = new String[20];
-	static String[] placas = new String[20];
-	static int [] anos = new int[20];
+	static String[] marcas = new String[2];
+	static String[] placas = new String[2];
+	static int [] anos = new int[2];
 	static int qtd = 0;
 	
 	public static void main(String[] args) {
@@ -48,8 +48,9 @@ public class Refractor2 {
 			exibeMsg(marcas[indice] +  " - " + anos[indice] + " - " + placas[indice]);
 		}
 	}
+	
 	static void cadastrar() {
-		if(qtd >= 20) {
+		if(qtd >= 2) {
 			exibeMsg("Limite Excedido");
 		}else {
 			marcas[qtd] = lerStr("Marca:");
