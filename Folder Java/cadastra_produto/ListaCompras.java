@@ -20,11 +20,39 @@ public class ListaCompras {
 		    if(op == 1) cadastra();
 		    if(op == 2) listaNome();
 		    if(op == 3) listarMais();
-		}while(op != 4);
+		    if(op == 4) listarTodos();
+		    if(op == 5) buscarMenos();
+		}while(op != 6);
 		
 		
 	}
+	static void exibeRetorno(String retorno) {
+		if (retorno.equals("")) {
+			JOptionPane.showMessageDialog(null, "Não encontrado", "Erro", 0);
+		}else {
+			JOptionPane.showMessageDialog(null, retorno);
+		}
+	}
 	
+	
+	static void listarTodos() {
+		ordenar();
+		String retorno = "";
+		for (MoldeProduto e : lista) {
+			retorno += e;
+		}
+		exibeRetorno(retorno);
+	}
+	static void buscarMenos() {
+		int qtdMinima = Integer.parseInt(JOptionPane.showInputDialog(null, "Queres buscar abaixo de qual valor?", "Pesquisa ai!", 1));
+		String retorno = "";
+		for (MoldeProduto e : lista) {
+			if(e.quantidade >= qtdMinima) {
+				retorno +=e;
+			}
+		}
+		exibeRetorno(retorno);
+	}
 public static void listarMais() {
 	String ret = "Produtos que necessitam de mais de 10 unidades!\n";
 	for(MoldeProduto e : lista) {
@@ -54,11 +82,23 @@ static void listaNome() {
 	}
 }
 
-
+static void ordenar() {
+	MoldeProduto aux = new MoldeProduto();
+	for(int i = 0; i< lista.size(); i++) {
+		for(int j = i+1; j < lista.size(); j++) {
+			if (lista.get(j).valor < lista.get(i).valor) {
+				aux = lista.get(j);
+				lista.set(j, lista.get(i));
+				lista.set(i, aux);
+			}
+		}
+	}
+}
 public static void cadastra() {
 	MoldeProduto e = new MoldeProduto();
-	e.nome = JOptionPane.showInputDialog("Nome do produto: ");
-	e.quantidade = Integer.parseInt(JOptionPane.showInputDialog("Qual a quantidade que desejas comprar??"));
+	e.nome = JOptionPane.showInputDialog(null, "Nome do produto: ", "Insira as informações!", 2);
+	e.quantidade = Integer.parseInt(JOptionPane.showInputDialog(null,"Qual a quantidade que desejas comprar?", "Insira as informações!", 2));
+	e.valor = Double.parseDouble(JOptionPane.showInputDialog(null, "Qual o valor do produto?", "Insira as informações!", 2));
 	if(e.nome.trim().equals("") || e.quantidade < 0) {
 		JOptionPane.showMessageDialog(null, "Faltam Informações", "Não encontrado", 0);
 	}else {
@@ -71,7 +111,8 @@ static int escolheMenu() {
 	String m = "1 - Cadastrar\n"
 			+ "2 - Buscar pelo nome\n"
 			+"3 - Listar os produtos mais necessitados\n"
-			+"4 - Sair";
+			+"4 - Listar Todos os produtos\n"
+			+"5 - Sair";
 	return Integer.parseInt(JOptionPane.showInputDialog(null, m,"Menu :) Selecione a Opção desejada!",3));
 	
 }
